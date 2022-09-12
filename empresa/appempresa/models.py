@@ -28,7 +28,7 @@ class usuarios(models.Model):
     fecha_creado=models.DateField()
     id_empleados=models.ForeignKey(empleados, on_delete=models.CASCADE)
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s" % (self.id_usuario, self.email, self.imagen, self.usuario, self.password, self.roles, self.fecha_creado, self.id_empleados)
+        return "%s %s %s %s %s %s %s %s" % (self.id_usuario, self.email, self.imagen, self.usuario, self.password, self.id_rol, self.fecha_creado, self.id_empleados)
 
 class empresas(models.Model):
     id_empresas=models.IntegerField(primary_key=True)
